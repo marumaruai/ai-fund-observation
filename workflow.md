@@ -1,29 +1,35 @@
-# 月次ワークフロー(観測者向け運営マニュアル)
+# workflow.md(観測者向け運営マニュアル)
 
 これはAIに見せるためのものではなく、観測者自身が毎月何をするかを明文化した運営マニュアルです。将来API化する際は、そのままフローの設計図として使えます。
 
+## リポジトリの構成(前提)
+
+- **Public** (`ai-fund-observation`): ルール・哲学・テンプレート・履歴など、公開してよいドキュメント(rules.md, handover.md, history.md, workflow.md, funds/, templates/)
+- **Private** (`ai-fund-observation-private`): 実データ(保有株数・取得単価・評価額・月次レポート)を含むもの(`portfolio/holdings.md`, `reports/YYYY-MM.md`)
+
 ## 標準フロー
 
-1. **holdings.md を更新**
+1. **`portfolio/holdings.md`(Private)を更新**
    - 各ファンドの保有株数・現在値・取得単価・評価損益を最新化する。
-2. **市場概況を書く**(`monthly/YYYY-MM/market.md`)
+2. **市場概況を書く**(`reports/YYYY-MM.md`、Private)
    - 直近1ヶ月の市場全体の動き、主要ニュースを簡潔にまとめる。
-3. **各AIへ一次判断を依頼**
-   - `handover.md` + 該当する `funds/[AI名].md` + `holdings.md` + `market.md` を渡す。
+3. **各AIへ一次判断を依頼**(`templates/monthly_prompt.md` を使う、Public)
+   - `handover.md` + 該当する `funds/[AI名].md`(Public) + `portfolio/holdings.md` + `reports/YYYY-MM.md`(Private)の中身を渡す。
    - 依頼内容: 直近1ヶ月の評価、入れ替え・比率変更の提案有無(理由・ロマン度への影響つき)。
    - (簡略運用も可: 他AIのコメントは見せず、独立して判断させる一往復で済ませてよい。毎月フル運用が負担なら、この簡略版を基本とする)
-4. **一次判断を ai-comments.md にまとめる**(`monthly/YYYY-MM/ai-comments.md`)
+4. **一次判断を `reports/YYYY-MM.md` にまとめる**(Private)
    - 各AIの回答をそのまま(改変せず)集約する。
-5. **(任意)全AIへ ai-comments.md を渡し、他ファンドの状況を踏まえた最終判断を取得**
+5. **(任意)全AIへ他ファンドの一次判断を渡し、他ファンドの状況を踏まえた最終判断を取得**(`templates/peer_review_prompt.md` を使う)
    - 手間がかかる場合は省略可。省略した場合は4の一次判断をそのまま最終判断として扱う。
-6. **funds/[AI名].md に判断履歴を追記する**
+6. **`funds/[AI名].md`(Public)に判断履歴を追記する**
    - **ここを忘れると、次回以降AIが自分の過去の判断を参照できなくなるので要注意。**
    - 月次記事を書き終えたタイミングで、必ず1行〜数行の要約を追記する。
-7. **article.md を作成する**(note記事の下書き)
+   - 追記する内容は判断の経緯・理由のみとし、具体的な金額・株数などの実データは書かない(Private側の`holdings.md`と重複させない)。
+7. **記事を作成する**(`templates/article_template.md` を使う)
 8. **noteに公開する**
 
 ## 注意点
 
-- `holdings.md` は唯一の実データ台帳。他のファイル(funds/*.md 等)に数値を書き写さない。
-- `history.md` は企画全体の経緯用。月次の個別判断はここに書かず `funds/*.md` に書く。
+- `portfolio/holdings.md`(Private) は唯一の実データ台帳。Public側のどのファイル(funds/*.md 等)にも数値を書き写さない。
+- `history.md`(Public) は企画全体の経緯用。月次の個別判断はここに書かず `funds/*.md` に書く。
 - 手作業の負担が大きいと感じたら、まず5(全AI間の情報共有)を削る。次に3の依頼粒度を簡素化する。継続できることを優先する。
