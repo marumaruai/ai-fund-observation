@@ -38,6 +38,7 @@
 - `funds/*.md`(各AIの投資哲学・時系列の判断履歴、毎回読ませる)と`history.md`(企画全体の経緯、毎回読む必要なし)を分離。
 - `portfolio/holdings.md`を保有株数・取得単価等の唯一の実データ台帳とし、他ファイルでの数値の重複記載を避ける方針。
 
+## 2026/07 GitHub起動システムの初回実証
 
 - handover.md を起動ファイルとして使用し、新しいChatGPTセッションへ企画を引き継ぐ実験を実施。
 - Publicリポジトリ（README.md、handover.md、rules.md、funds/chatgpt.md等）のみで、企画の全体像・ルール・ChatGPTファンドの投資哲学を理解できることを確認。
