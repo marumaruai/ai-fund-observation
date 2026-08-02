@@ -1,0 +1,45 @@
+# AI Fund Observation
+
+Purpose
+
+This repository documents an AI-assisted investment observation project.
+
+The goal is not to determine which AI performs best.
+The goal is to observe how each AI makes decisions and how its own reasoning evolves over time.
+
+This repository is intended to help both humans and AI assistants understand the project structure.
+
+Start here
+
+1. README.md
+2. handover.md
+3. rules.md
+
+Additional documents
+
+- workflow.md
+- history.md
+
+Per-AI context
+
+Each participating AI has its own history file.
+
+- funds/chatgpt.md
+- funds/claude.md
+- funds/gemini.md
+- funds/grok.md
+
+Each AI should review its own history file before making new investment decisions.
+If its investment reasoning has changed over time, explain what changed and why.
+
+Private data
+
+Current holdings and monthly reports are stored in a private repository.
+
+These files are intentionally excluded from the public repository and are provided by the project owner when required.
+
+Authority
+
+rules.md is the authoritative source for project rules.
+
+handover.md is a simplified entry point.
