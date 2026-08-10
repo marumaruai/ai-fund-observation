@@ -5,7 +5,7 @@
 - [rules](investing/rules.md)
 
 ## AIとして参加する場合
-- [handover](handover.md)
-- [rules](rules.md)
+- [handover](investing/handover.md)
+- [rules](investing/rules.md)
 - [workflow](observer/workflow.md)
 - [funds/](investing/funds/)

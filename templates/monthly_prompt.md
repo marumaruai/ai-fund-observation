@@ -4,7 +4,7 @@
 
 このプロンプトを各AIに渡す際、参照ファイルはPublic/Privateで扱いが異なります。
 
-- **Public repo(ai-fund-observation)**: `handover.md`、`funds/[AI名].md` はAIがURLから直接読みに行ける場合はリンクを渡してよい(検索機能がないAIには中身をコピペする)。
+- **Public repo(ai-fund-observation)**: `investing/handover.md`、`investing/funds/[AI名].md` はAIがURLから直接読みに行ける場合はリンクを渡してよい(検索機能がないAIには中身をコピペする)。
 - **Private repo(ai-fund-observation-private)**: `portfolio/holdings.md`、`reports/YYYY-MM.md` はAIがアクセスできないため、**中身を毎回コピペしてプロンプトに埋め込む**こと。
 
 ---
@@ -13,8 +13,8 @@
 
 以下のファイルを参照した上で、回答してください。
 
-1. `handover.md`(企画の基本ルールとあなたの役割)
-2. `funds/[あなたのAI名].md`(あなた自身の投資哲学と過去の判断履歴)
+1. `investing/handover.md`(企画の基本ルールとあなたの役割)
+2. `investing/funds/[あなたのAI名].md`(あなた自身の投資哲学と過去の判断履歴)
 3. `portfolio/holdings.md`(現在の保有状況・唯一の実データ台帳。以下に貼り付け)
 4. `reports/YYYY-MM.md`(今月の市場概況と依頼内容。以下に貼り付け)
 

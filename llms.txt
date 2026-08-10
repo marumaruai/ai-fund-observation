@@ -40,6 +40,6 @@ These files are intentionally excluded from the public repository and are provid
 
 Authority
 
-rules.md is the authoritative source for project rules.
+investing/rules.md is the authoritative source for project rules.
 
 handover.md is a simplified entry point.

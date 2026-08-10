@@ -10,14 +10,16 @@
 
 - 複数AIを競わせるのではなく、それぞれの投資哲学と判断の変化を観察することを目的としています。
 - GitHubをAIと人間が共有する知識ベースとして運用しています。
-- AIは `handover.md` を起点として新しいセッションでも企画へ再参加できるよう設計されています。
+- AIは `investing/handover.md` を起点として新しいセッションでも企画へ再参加できるよう設計されています。
 - 運営ルール・履歴・テンプレートを公開し、実データのみPrivateリポジトリで管理しています。
 
 ## AIの方へ
 
-このプロジェクトに初めて参加する場合、まず `handover.md` を読んでください。次に `funds/[あなた自身のAI名].md` を読み、自分自身の過去の判断を確認してから、依頼された判断を行ってください。
+このプロジェクトに初めて参加する場合、まず `investing/handover.md` を読んでください。
+次に `investing/funds/[あなた自身のAI名].md` を読み、自分自身の過去の判断を確認してから、依頼された判断を行ってください。
 
-判断に迷った場合は、`rules.md` を正としてください。`handover.md` はその要約であり、矛盾がある場合は `rules.md` が優先されます。
+判断に迷った場合は、`investing/rules.md` を正としてください。
+`investing/handover.md` はその要約であり、矛盾がある場合は `investing/rules.md` が優先されます。
 
 ## このリポジトリの構成
 
@@ -25,32 +27,45 @@
 
 ```
 ai-fund-observation/ (Public, このリポジトリ)
-├── README.md          … このファイル
-├── index.md           … GitHub Pages 向けの案内
-├── llms.txt           … AI向けの入口（簡潔な目次）
-├── rules.md           … 正式な運用規約
-├── handover.md        … AI向け起動ファイル（セッション開始時に渡す要約）
-├── history.md         … 企画全体の経緯・決定の記録（没案含む）
-├── workflow.md        … 観測者向けの月次運営マニュアル
-├── funds_template.md  … 各AIファンドのファイル雛形
-├── CHANGELOG.md       … rules.md の変更履歴
-├── funds/
-│   ├── claude.md      … Claudeファンドの投資哲学・判断履歴
-│   ├── chatgpt.md     … ChatGPTファンドの投資哲学・判断履歴
-│   ├── gemini.md      … Geminiファンドの投資哲学・判断履歴
-│   ├── grok.md        … Grokファンドの投資哲学・判断履歴
-│   └── local.md       … LocalLLM枠（将来用、現在ダミー）
-├── templates/
-│   ├── monthly_prompt.md     … 毎月のAIへの一次判断依頼テンプレート
-│   ├── peer_review_prompt.md … 他ファンドのコメントを踏まえた相互レビュー（任意）
-│   └── article_template.md   … note記事の雛形
-└── articles/          … 記事ネタ・文体・タイムラインなど執筆用メモ
+├── README.md                 … このファイル
+├── index.md                  … GitHub Pages 向けの案内
+├── llms.txt                  … AI向けの入口（簡潔な目次）
+├── CHANGELOG.md              … rules の変更履歴
+│
+├── investing/                … 投資判断に関する公開ドキュメント
+│   ├── rules.md              … 正式な運用規約
+│   ├── handover.md           … AI向け起動ファイル（セッション開始時の要約）
+│   ├── funds_template.md     … 各AIファンドのファイル雛形
+│   └── funds/
+│       ├── claude.md         … Claudeファンドの投資哲学・判断履歴
+│       ├── chatgpt.md        … ChatGPTファンドの投資哲学・判断履歴
+│       ├── gemini.md         … Geminiファンドの投資哲学・判断履歴
+│       ├── grok.md           … Grokファンドの投資哲学・判断履歴
+│       └── local.md          … LocalLLM枠（将来用、現在ダミー）
+│
+├── editorial/                … 記事執筆・公開に関するドキュメント
+│   ├── style-guide.md        … note執筆方針・無料／有料の切り分け
+│   ├── paid-content.md       … 有料コンテンツ候補
+│   └── templates/
+│       ├── monthly-template.md    … 月次記事（途中から有料）の雛形
+│       ├── summary-template.md    … 要約記事（任意）の雛形
+│       └── article-template.md    … 月次以外の記事の雛形
+│
+├── observer/                 … 観測者向けの運営・経緯
+│   ├── workflow.md           … 月次運営マニュアル（投資／編集フロー）
+│   ├── history.md            … 企画全体の経緯・決定の記録
+│   ├── archive/              … 過去資料
+│   └── notes/                … 運営メモ
+│
+└── templates/                … AIへの依頼テンプレート
+    ├── monthly_prompt.md     … 一次判断依頼
+    └── peer_review_prompt.md … 相互レビュー（任意）
 
 ai-fund-observation-private/ (Private, 別リポジトリ)
 ├── portfolio/
-│   └── holdings.md    … 保有株数・取得単価・評価額（唯一の実データ台帳）
+│   └── holdings.md           … 保有株数・取得単価・評価額（唯一の実データ台帳）
 └── reports/
-    └── YYYY-MM.md     … 月次の市場概況・AIコメントまとめ（実データ含む）
+    └── YYYY-MM.md            … 月次の市場概況・AIコメントまとめ（実データ含む）
 ```
 
 ## 免責事項

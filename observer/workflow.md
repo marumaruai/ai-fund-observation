@@ -11,7 +11,7 @@
 - 毎月、**米国雇用統計（NFP、原則第1金曜日発表）の翌週、10日前後**を目安に実施する。
 - 理由: 雇用統計発表直後は市場全体のボラティリティが一時的に高まりやすく、特に小型グロース株はその影響を受けやすい。数営業日置くことで、ノイズの少ない数字で評価しやすくなる。
 - 月末まで引っ張る必要はない。
-- **実施日の柔軟性と決算延期**（詳細は `rules.md` 規約3）:
+- **実施日の柔軟性と決算延期**（詳細は `investing/rules.md` 規約3）:
   - **筆者都合**: 基準日は毎月10日とし、都合により前後（目安7〜13日）で実施してよい。
   - **決算延期**: 対象銘柄の決算が**実施予定日より前**にある場合は、発表後2営業日を目安に延期する。ただし基準日（10日）から**最も遅くとも13日以内**に実施する。
   - 筆者都合の「前後の幅」と、決算延期の「13日上限」は別の話なので混同しない。
@@ -22,7 +22,7 @@
 
 - **Public**（`ai-fund-observation`）
   - ルール・哲学・履歴・テンプレート・ドキュメント
-  - 例: `rules.md`, `handover.md`, `history.md`, `workflow.md`, `funds/`, `templates/`, `articles/`
+  - 例: `investing/rules.md`, `investing/handover.md`, `observer/history.md`, `observer/workflow.md`, `investing/funds/`, `templates/`
 - **Private**（`ai-fund-observation-private`）
   - 実データ
   - 例: `portfolio/holdings.md`, `reports/YYYY-MM.md`
@@ -40,8 +40,8 @@
 
 3. **各AIへ一次判断を依頼**（`templates/monthly_prompt.md`）
    - **必須（3点）**:
-     1. `handover.md`（Public）
-     2. 該当する `funds/[AI名].md`（Public）
+     1. `investing/handover.md`（Public）
+     2. 該当する `investing/funds/[AI名].md`（Public）
      3. `portfolio/holdings.md` の中身（Private → **コピペで渡す**。可能なら当該ファンドの行を中心に）
    - **任意（4点目）**:
      - `reports/YYYY-MM.md` の市場概況（Private → コピペ）。簡潔な場合のみ渡す。長い場合は「今月の注目材料を3行」に要約して渡す。
@@ -59,10 +59,10 @@
 6. **観測者が最終決定する**
    - 各AIの提案を確認し、実行するか据え置くかを決める（決定権は常に観測者）。
 
-7. **`funds/[AI名].md`（Public）に判断履歴を追記する**
+7. **`investing/funds/[AI名].md`（Public）に判断履歴を追記する**
    - **ここを忘れると、次回以降AIが自分の過去の判断を参照できなくなるので要注意。**
    - 月次記事を書き終えたタイミングでもよいが、必ず1行〜数行の要約を追記する。
-   - 追記する内容は判断の経緯・理由のみとし、具体的な金額・株数などの実データは書かない（`holdings.md` と重複させない）。
+   - 追記する内容は判断の経緯・理由のみとし、具体的な金額・株数などの実データは書かない（`portfolio/holdings.md` と重複させない）。
 
 ---
 
@@ -73,23 +73,23 @@
 1. **材料を確認する**
    - `reports/YYYY-MM.md`（AIコメント・市場概況）
    - `portfolio/holdings.md`（数値の正）
-   - 必要に応じて `funds/*.md`
+   - 必要に応じて `investing/funds/*.md`
 
 2. **月次記事の本文を作る**
-   - `templates/editorial/monthly-template.md` を使う
+   - `editorial/templates/monthly-template.md` を使う
    - 現在の公開方式（一部有料・全文公開・要約記事併用など）に従って記事を構成する。
    - **無料**: 結果（一覧・判断ラベル・ポイント）
    - **有料**: 過程（AIコメント全文・根拠・比較・運営メモ）
 
 3. **（任意）要約記事を作る**
-   - `templates/editorial/summary-template.md` を使う
+   - `editorial/templates/summary-template.md` を使う
    - 2本に分ける必要がある月だけ。通常は不要
 
 4. **（任意）月次以外の記事**
-   - `templates/editorial/article-template.md` を使う
+   - `editorial/templates/article-template.md` を使う
 
 5. **観測者が原稿を確認する**
-   - 数値は `holdings.md` と一致しているか
+   - 数値は `portfolio/holdings.md` と一致しているか
    - AIコメントの意味が改変されていないか
    - 投資助言に読める断定がないか
    - 公開範囲（無料／有料）の区切りは妥当か
@@ -110,8 +110,8 @@
 
 ## 注意点
 
-- `portfolio/holdings.md`（Private）は唯一の実データ台帳。Public側のどのファイル（`funds/*.md` 等）にも数値を書き写さない。
-- `history.md`（Public）は企画全体の経緯用。月次の個別判断はここに書かず `funds/*.md` に書く。
+- `portfolio/holdings.md`（Private）は唯一の実データ台帳。Public側のどのファイル（`investing/funds/*.md` 等）にも数値を書き写さない。
+- `observer/history.md`（Public）は企画全体の経緯用。月次の個別判断はここに書かず `investing/funds/*.md` に書く。
 - 手作業の負担が大きいと感じたら、まず相互レビュー（A-5）を削る。次に依頼粒度を簡素化する。継続できることを優先する。
 - 編集対象ファイルは、編集直前に最新版をPullすること。セッション開始時に読んだ内容をそのまま編集対象として扱わない。
 - 編集中に他者が更新した可能性がある場合は、保存前に最新版との差分を確認し、必要に応じて変更を取り込んでから保存する。
