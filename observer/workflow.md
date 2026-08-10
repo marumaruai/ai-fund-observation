@@ -22,7 +22,7 @@
 
 - **Public**（`ai-fund-observation`）
   - ルール・哲学・履歴・テンプレート・ドキュメント
-  - 例: `investing/rules.md`, `investing/handover.md`, `observer/history.md`, `observer/workflow.md`, `investing/funds/`, `templates/`
+  - 例: `investing/rules.md`, `investing/handover.md`, `observer/history.md`, `observer/workflow.md`, `investing/funds/`, `investing/prompts/`
 - **Private**（`ai-fund-observation-private`）
   - 実データ
   - 例: `portfolio/holdings.md`, `reports/YYYY-MM.md`
