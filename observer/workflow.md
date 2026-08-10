@@ -43,6 +43,7 @@
      1. `investing/handover.md`（Public）
      2. 該当する `investing/funds/[AI名].md`（Public）
      3. `portfolio/holdings.md` の中身（Private → **コピペで渡す**。可能なら当該ファンドの行を中心に）
+     このプロンプトを各AIに渡す際、参照ファイルはPublic/Privateで扱いが異なります。
    - **任意（4点目）**:
      - `reports/YYYY-MM.md` の市場概況（Private → コピペ）。簡潔な場合のみ渡す。長い場合は「今月の注目材料を3行」に要約して渡す。
    - AIに Public リポジトリ全体を読ませる必要はない。上記に限定する。
