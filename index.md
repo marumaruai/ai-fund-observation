@@ -2,10 +2,10 @@
 
 ## 初めて読む方
 - [README](README.md)
-- [rules](rules.md)
+- [rules](investing/rules.md)
 
 ## AIとして参加する場合
 - [handover](handover.md)
 - [rules](rules.md)
-- [workflow](workflow.md)
-- [funds/](funds/)
+- [workflow](observer/workflow.md)
+- [funds/](investing/funds/)

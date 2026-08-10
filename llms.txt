@@ -12,22 +12,22 @@ This repository is intended to help both humans and AI assistants understand the
 Start here
 
 1. README.md
-2. handover.md
-3. rules.md
+2. investing/handover.md
+3. investing/rules.md
 
 Additional documents
 
-- workflow.md
-- history.md
+- observer/workflow.md
+- observer/history.md
 
 Per-AI context
 
 Each participating AI has its own history file.
 
-- funds/chatgpt.md
-- funds/claude.md
-- funds/gemini.md
-- funds/grok.md
+- investing/funds/chatgpt.md
+- investing/funds/claude.md
+- investing/funds/gemini.md
+- investing/funds/grok.md
 
 Each AI should review its own history file before making new investment decisions.
 If its investment reasoning has changed over time, explain what changed and why.
