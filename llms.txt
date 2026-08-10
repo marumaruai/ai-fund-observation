@@ -42,4 +42,4 @@ Authority
 
 investing/rules.md is the authoritative source for project rules.
 
-handover.md is a simplified entry point.
+investing/handover.md is a simplified entry point.
