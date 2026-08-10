@@ -38,7 +38,7 @@
    - 直近1ヶ月の市場全体の動き、主要ニュースを**簡潔に**まとめる。
    - AIへの入力量を増やしすぎないよう、長文にしない（特にGemini向け）。
 
-3. **各AIへ一次判断を依頼**（`templates/monthly_prompt.md`）
+3. **各AIへ一次判断を依頼**（`investing/prompts/monthly_prompt.md`）
    - **必須（3点）**:
      1. `investing/handover.md`（Public）
      2. 該当する `investing/funds/[AI名].md`（Public）
@@ -53,7 +53,7 @@
 4. **一次判断を `reports/YYYY-MM.md` にまとめる**（Private）
    - 各AIの回答をそのまま（改変せず）集約する。
 
-5. **（任意）相互レビュー**（`templates/peer_review_prompt.md`）
+5. **（任意）相互レビュー**（`investing/prompts/peer_review_prompt.md`）
    - 全AIへ他ファンドの一次判断を渡し、最終判断を取得する。
    - 手間がかかる場合は省略可。省略した場合は一次判断をそのまま最終判断として扱う。
 
