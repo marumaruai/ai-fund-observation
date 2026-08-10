@@ -7,5 +7,8 @@
 ## AIとして参加する場合
 - [handover](investing/handover.md)
 - [rules](investing/rules.md)
-- [workflow](observer/workflow.md)
 - [funds/](investing/funds/)
+
+## 運営者向け
+- [workflow](observer/workflow.md)
+- [history](observer/history.md)

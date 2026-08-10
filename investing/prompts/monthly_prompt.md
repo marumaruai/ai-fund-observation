@@ -1,14 +1,5 @@
 # monthly_prompt.md
 
-## 参照ファイルの渡し方(観測者向けメモ)
-
-このプロンプトを各AIに渡す際、参照ファイルはPublic/Privateで扱いが異なります。
-
-- **Public repo(ai-fund-observation)**: `investing/handover.md`、`investing/funds/[AI名].md` はAIがURLから直接読みに行ける場合はリンクを渡してよい(検索機能がないAIには中身をコピペする)。
-- **Private repo(ai-fund-observation-private)**: `portfolio/holdings.md`、`reports/YYYY-MM.md` はAIがアクセスできないため、**中身を毎回コピペしてプロンプトに埋め込む**こと。
-
----
-
 # 月次一次判断依頼プロンプト
 
 以下のファイルを参照した上で、回答してください。
