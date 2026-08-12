@@ -36,13 +36,15 @@ ai-fund-observation/ (Public, このリポジトリ)
 │   ├── rules.md              … 正式な運用規約
 │   ├── handover.md           … AI向け起動ファイル（セッション開始時の要約）
 │   ├── funds_template.md     … 各AIファンドのファイル雛形
-│   └── funds/
-│       ├── claude.md         … Claudeファンドの投資哲学・判断履歴
-│       ├── chatgpt.md        … ChatGPTファンドの投資哲学・判断履歴
-│       ├── gemini.md         … Geminiファンドの投資哲学・判断履歴
-│       ├── grok.md           … Grokファンドの投資哲学・判断履歴
-│       └── local.md          … LocalLLM枠（将来用、現在ダミー）
-│
+│   ├── funds/
+│   │   ├── claude.md         … Claudeファンドの投資哲学・判断履歴
+│   │   ├── chatgpt.md        … ChatGPTファンドの投資哲学・判断履歴
+│   │   ├── gemini.md         … Geminiファンドの投資哲学・判断履歴
+│   │   ├── grok.md           … Grokファンドの投資哲学・判断履歴
+│   │   └── local.md          … LocalLLM枠（将来用、現在ダミー）
+│   └── prompts/
+│       ├── monthly_prompt.md
+│       └── peer_review_prompt.md
 ├── editorial/                … 記事執筆・公開に関するドキュメント
 │   ├── style-guide.md        … note執筆方針・無料／有料の切り分け
 │   ├── paid-content.md       … 有料コンテンツ候補
