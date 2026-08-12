@@ -42,9 +42,10 @@ ai-fund-observation/ (Public, このリポジトリ)
 │   │   ├── gemini.md         … Geminiファンドの投資哲学・判断履歴
 │   │   ├── grok.md           … Grokファンドの投資哲学・判断履歴
 │   │   └── local.md          … LocalLLM枠（将来用、現在ダミー）
-│   └── prompts/
-│       ├── monthly_prompt.md
-│       └── peer_review_prompt.md
+│   └── prompts/                    … AIへの依頼テンプレート
+│       ├── monthly_prompt.md       … 一次判断依頼
+│       └── peer_review_prompt.md   … 相互レビュー（任意）
+│
 ├── editorial/                … 記事執筆・公開に関するドキュメント
 │   ├── style-guide.md        … note執筆方針・無料／有料の切り分け
 │   ├── paid-content.md       … 有料コンテンツ候補
@@ -53,15 +54,12 @@ ai-fund-observation/ (Public, このリポジトリ)
 │       ├── summary-template.md    … 要約記事（任意）の雛形
 │       └── article-template.md    … 月次以外の記事の雛形
 │
-├── observer/                 … 観測者向けの運営・経緯
-│   ├── workflow.md           … 月次運営マニュアル（投資／編集フロー）
-│   ├── history.md            … 企画全体の経緯・決定の記録
-│   ├── archive/              … 過去資料
-│   └── notes/                … 運営メモ
-│
-└── templates/                … AIへの依頼テンプレート
-    ├── monthly_prompt.md     … 一次判断依頼
-    └── peer_review_prompt.md … 相互レビュー（任意）
+└── observer/                 … 観測者向けの運営・経緯
+    ├── workflow.md           … 月次運営マニュアル（投資／編集フロー）
+    ├── history.md            … 企画全体の経緯・決定の記録
+    ├── archive/              … 過去資料
+    └── notes/                … 運営メモ
+
 
 ai-fund-observation-private/ (Private, 別リポジトリ)
 ├── portfolio/
