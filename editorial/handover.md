@@ -1,7 +1,9 @@
 # editorial/handover.md
 
 この文書は編集AIがこの企画の記事執筆にセッション単位で参加するための起動ファイルです。
-企画全体の規約については `investing/rules.md` を優先し、編集上のルールについては `editorial/style-guide.md` を優先してください。
+
+記事編集・公開に関するルールについては `editorial/style-guide.md` を優先し、
+投資判断・ファンド運用に関するルールについては `investing/rules.md` に従う。
 
 ---
 
