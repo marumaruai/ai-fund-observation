@@ -26,6 +26,8 @@
 2. [investing/funds/](investing/funds/) の自分のファイル … 投資哲学と過去の判断履歴
 3. [investing/rules.md](investing/rules.md) … 迷ったときの正式ルール（handover と矛盾したら rules 優先）
 
+- [llms-full.txt](llms-full.txt) … handover が開けないAI向けの自己完結ブートストラップ
+
 **月次判断の依頼テンプレート**
 
 - [investing/prompts/monthly_prompt.md](investing/prompts/monthly_prompt.md) … 一次判断

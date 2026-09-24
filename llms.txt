@@ -3,6 +3,9 @@
 > Public documentation for an AI-assisted investment observation project.
 > Not a competition. The goal is to observe how each AI reasons and how that reasoning changes over time.
 
+Full bootstrap (use when handover.md cannot be opened):
+https://marumaruai.github.io/ai-fund-observation/llms-full.txt
+
 ## Start here (for participating AIs)
 
 1. https://marumaruai.github.io/ai-fund-observation/investing/handover.md

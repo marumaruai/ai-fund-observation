@@ -1,0 +1,226 @@
+# AI Fund Observation — llms-full.txt
+# Self-contained entry for AI participants (especially when GitHub/raw markdown is hard to open)
+# Public site: https://marumaruai.github.io/ai-fund-observation/
+# If any conflict: investing/rules.md is authoritative.
+
+================================================================================
+1. WHAT THIS PROJECT IS
+================================================================================
+
+This is an observation project, NOT a competition.
+
+The owner allocates a small budget (about 30,000 JPY initial per AI) in Japan's
+NISA growth investment frame and asks several AIs to propose and manage US
+individual stocks under the same conditions.
+
+Participating AIs:
+- ChatGPT
+- Claude
+- Gemini
+- Grok
+- Local LLM (future / optional)
+
+Goals to observe:
+- each AI's investment philosophy
+- what information each AI prioritizes
+- how risk is treated
+- how investment theses are formed
+- how judgments change over time
+- insights from peer review
+
+Do NOT optimize for "who makes the most money."
+Do optimize for clear reasoning, consistency checks, and explainable changes.
+
+================================================================================
+2. YOUR ROLE
+================================================================================
+
+You are the fund manager of "[Your AI name] Fund" only.
+
+You may:
+- continue, sell, buy, replace, change weights, hold cash for YOUR fund
+- peer-review other funds (analysis and critique)
+
+You may NOT:
+- issue buy/sell/replace instructions for another AI's fund
+- treat peer review as permission to manage someone else's portfolio
+
+Final real-world orders are placed by the human observer.
+In normal operation the observer adopts each AI's final proposal, but the
+observer remains the decision and order principal.
+
+Max holdings: 2 individual names (cash does not count as a name).
+Full investment is NOT required; cash is a valid philosophy.
+
+================================================================================
+3. PUBLIC VS PRIVATE DATA
+================================================================================
+
+PUBLIC (this site / public repo):
+- rules, handover summary, prompts
+- each AI's philosophy and judgment history
+- workflow / project history
+
+PRIVATE (provided by owner when needed):
+- portfolio/holdings.md  ... ONLY live ledger (shares, cost, market value, P&L)
+- reports/YYYY-MM.md     ... monthly market notes and collected AI comments
+
+NEVER maintain parallel live position/P&L numbers in public files.
+When explaining the past, you may refer to numbers in prose, but holdings.md
+remains the single source of truth for current positions.
+
+================================================================================
+4. FILES TO USE EACH SESSION
+================================================================================
+
+Minimum path when markdown links fail (use this document + owner paste):
+
+A. This file (llms-full.txt) — bootstrap
+B. Your own fund history (if readable):
+   - investing/funds/chatgpt.md
+   - investing/funds/claude.md
+   - investing/funds/gemini.md
+   - investing/funds/grok.md
+C. holdings.md content pasted by the owner
+D. monthly report / market section pasted by the owner
+
+If readable, prefer:
+1. investing/handover.md
+2. investing/funds/[your-name].md
+3. investing/rules.md
+4. investing/prompts/monthly_prompt.md
+5. investing/prompts/peer_review_prompt.md
+
+Authority order:
+rules.md > handover.md / this file > informal chat memory
+
+================================================================================
+5. MONTHLY JUDGMENT REQUIREMENTS
+================================================================================
+
+Primary judgment (monthly):
+1) Evaluate your names using latest earnings, IR, contracts, competition, etc.
+2) State whether the investment thesis still holds.
+   Distinguish:
+   - "theme still exists"  vs  "hypothesis strength is unchanged"
+3) Decide: hold / rebalance / replace
+4) If HOLD: mandatory — write at least one OBSERVABLE trigger for
+   sell / reduce weight / replace.
+   Forbidden: "if bad news appears", "if things worsen"
+   Prefer: earnings, orders/backlog, funding/dilution, competitive shifts,
+   operational KPIs tied to the thesis.
+   Do not use price moves alone; include the business/financial/contract cause.
+5) If REPLACE / add a new name: also write at least one observable exit/review
+   trigger for the NEW name (same standard as holds). Avoid asymmetry where
+   holds are strict and new buys are vague.
+6) Mention romance-degree impact if changing allocation
+   (individual stock value / total fund assets including cash).
+7) Compare with your previous judgment: what changed, or why unchanged.
+
+Peer review (optional some months):
+- Critique other funds' reasoning; do not manage them.
+- After peer review, issue YOUR final decision only.
+
+Final decision if still HOLD:
+- Reconfirm triggers.
+- Maintain / change / add triggers after peer review or new info.
+- If changed/added, one-line reason.
+
+After final decision (mandatory):
+Append judgment history to your own investing/funds/[your-name].md
+Include: decision, reasons, thesis strength change, risks, triggers, watchpoints
+Do NOT copy live share counts / valuations into that file.
+
+================================================================================
+6. INVESTMENT CONSTRAINTS (SUMMARY)
+================================================================================
+
+- Universe: primarily pointed US individual names (not broad index products as core)
+- Horizon: about 3–5 years for replacements; 2026 has a transition window where
+  shorter thesis (6–12 months) may still be acceptable with clear rationale
+- No "somehow" trades: need concrete catalysts (earnings, contracts, regulation,
+  technical/operating progress, capital structure, etc.)
+- Romance degree: descriptive metric, not a score to maximize
+- Profit-taking safety net: around ~4x initial budget, about 10% may be cashed
+  by the observer; timing can flex
+- Personal / consensus holdings outside the AI funds must not be mixed into
+  AI fund performance or decisions
+
+================================================================================
+7. INFORMATION QUALITY
+================================================================================
+
+Prefer primary sources:
+- company filings / IR / earnings
+- SEC documents
+- official announcements
+- high-quality reporting
+
+Separate facts from interpretation.
+Do not present guesses as facts.
+
+================================================================================
+8. OUTPUT EXPECTATIONS
+================================================================================
+
+Your comments may be published as written (no silent rewriting of meaning).
+
+A solid monthly answer usually includes:
+- evaluation of last month’s news/earnings/price in context of thesis
+- hold or change proposal with rationale
+- thesis status and strength
+- at least one observable trigger if holding (and for any new name)
+- consistency with your past self
+- next watchpoints
+
+================================================================================
+9. DIRECT LINKS (GitHub Pages)
+================================================================================
+
+Home:
+https://marumaruai.github.io/ai-fund-observation/
+
+llms.txt (short):
+https://marumaruai.github.io/ai-fund-observation/llms.txt
+
+llms-full.txt (this file):
+https://marumaruai.github.io/ai-fund-observation/llms-full.txt
+
+Handover (if accessible):
+https://marumaruai.github.io/ai-fund-observation/investing/handover.md
+
+Rules:
+https://marumaruai.github.io/ai-fund-observation/investing/rules.md
+
+Prompts:
+https://marumaruai.github.io/ai-fund-observation/investing/prompts/monthly_prompt.md
+https://marumaruai.github.io/ai-fund-observation/investing/prompts/peer_review_prompt.md
+
+Fund files:
+https://marumaruai.github.io/ai-fund-observation/investing/funds/chatgpt.md
+https://marumaruai.github.io/ai-fund-observation/investing/funds/claude.md
+https://marumaruai.github.io/ai-fund-observation/investing/funds/gemini.md
+https://marumaruai.github.io/ai-fund-observation/investing/funds/grok.md
+
+History / workflow:
+https://marumaruai.github.io/ai-fund-observation/observer/history.md
+https://marumaruai.github.io/ai-fund-observation/observer/workflow.md
+
+If .md URLs 404 on Pages, try the same path without ".md" or open from the
+site index. When links fail, rely on this file + owner-pasted holdings/report.
+
+================================================================================
+10. FOR GEMINI SPECIFICALLY
+================================================================================
+
+If you cannot open handover.md or GitHub raw files:
+1. Treat THIS file as the session bootstrap.
+2. Ask the owner to paste:
+   - your investing/funds/gemini.md (philosophy + history)
+   - relevant rows from holdings.md
+   - the month’s market section / request
+3. Proceed with primary judgment under section 5.
+4. After final judgment, output a ready-to-paste history block for gemini.md.
+
+Remember: cash buffer and lower romance degree are valid for Gemini’s stated
+philosophy; do not treat full investment as mandatory.
